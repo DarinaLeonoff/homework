@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{}
+.list{}
+.title{}
+.text{}
+.text-white{}
+.figure{}
+.caption{}
+.low-title{}
+.box{}
+.button{}
+.info{}
+
+
+.product{
+  &-name{}
+  &-list{
+  &-li{}
+}
+  &-img{}
+}
+
+.about{
+  &-title{}
+  &-text{}
+  &-img{}
+}
+
+.dignity{
+  &-title{}
+  &-list{
+    &-li{}    
+}
+
+}
+
+.screenshots{
+  &-title{}
+  &-box{
+    &-figure{
+        &__img{}
+        &__caption{
+            &-title{}
+            &-text{}
+        }
+    }
+  }
+}
+
+.reviews{
+  &-title{}
+  &-box{
+    &-figure{
+        &__img{}
+        &__caption{
+            &-text{}
+            &-autor{}
+        }
+    }
+  }
+
+}
+
+.buy{
+    &-title{}
+    &-box{
+        &-plan{
+            &__title{}
+            &__price{}
+            &__list{
+                &-li{}
+            }
+            &__button{}
+        }
+    }
+
+
+}
+
+.contacts{
+    &-title{}
+    &-form{
+        &__name{}
+        &__eamil{}
+        &__message{}
+        &__submit{}
+    }
+    &-info{
+        &-list{
+            &__skype{}
+            &__number{}
+            &__email{}
+            &__phone{}
+        }
+        &-social{
+            &__li{
+                & .twitter{}
+                & .facebook{}
+                & .linkedin{}
+                & .google{}
+                & .youtube{}
+            }
+        }
+    }
+}
+
+.footer{
+  &-text{}
+}
