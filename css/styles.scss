@@ -1,113 +1,357 @@
+@import "vars";
+@font-face {
+ font-family: "Socialico";
+ src: url(../fonts/Socialico/Socialico.ttf);
+}
 *{
     margin: 0;
     padding: 0;
 }
 
-section{}
+body{
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: $grayish_blue;
+}
+
+.container{
+  width: 1190px;
+  margin: 0 auto;
+}
+section{
+  padding: 50px 0;
+}
 .list{}
-.title{}
-.text{}
-.text-white{}
-.figure{}
-.caption{}
+.title{
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.text{
+  line-height: 1.5;
+  color: $dark_gray;
+  font-size: 16px;
+}
+.text-white{
+  color: $white;
+}
 .low-title{}
-.box{}
-.button{}
-.info{}
+.box{
+  display: flex;
+}
+.button{
+  background: #fff;
+  padding: 15px 0;
+  display: block;
+  text-align: center;
+  width: 260px;
+  border-radius: 5px;
+  align-self: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $grayish_blue;
+  font-weight: bold;
+  font-size: 18px;
+}
+.info{
+  max-width: 50%;
+}
 
 
 .product{
-  &-name{}
+  background: #445162;
+  &-box{
+    justify-content: space-between;
+  }
+  &-name{
+    font-size: 59px;
+    font-weight: normal;
+    line-height: 49px;
+  }
   &-list{
-  &-li{}
-}
-  &-img{}
+    padding-top: 51px;
+    list-style: none;
+  }
+  &-list-item{
+    font-size: 20px;
+    line-height: 1.8;
+    &::before{
+      content: url(../img/check_icon.png);
+      margin-right: 10px;
+    }
+  }
+  &-img{
+    width: 469px;
+    height: 214px;
+    background-color: #ffffff;
+  }
 }
 
 .about{
-  &-title{}
-  &-text{}
-  &-img{}
+  &-box{
+    justify-content: space-between;
+  }
+  &-title{
+    text-align: left;
+  }
+  &-text{
+    max-width: 650px;
+    margin-bottom: 1em;
+  }
+  &-img{
+    width: 430px;
+    height: 245px;
+    background-color: $grayish_blue;
+  }
 }
 
 .dignity{
-  &-title{}
+  background: $light_gray;
+  &-title{
+    margin: 0;
+  }
   &-list{
-    &-li{}    
-}
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  &-list-item{
+    width: 526px;
+    margin-top: 36px;
+    display: flex;
+    &::before{
+      content: url(../img/plus.png);
+      padding: 6px;
+      padding-bottom: 0;
+      margin-right: 9px;
+      margin-top: 6px;
+      align-self: flex-start;
+      background-color: $grayish_blue;
+    }
+  }    
 
 }
 
 .screenshots{
-  &-title{}
-  &-box{
-    &-figure{
-        &__img{}
-        &__caption{
-            &-title{}
-            &-text{}
-        }
-    }
+  &-title{
+    margin: 0;
   }
+  &-box{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-figure{
+    width: 50%;
+    display: flex;
+    margin-top: 30px;
+  }
+  &-img{
+    width: 200px;
+    height: 150px;
+    background-color: $grayish_blue;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+  &-caption{
+    width: 360px;
+      &-title{
+        font-size: 24px;
+        line-height: 1.25;
+        margin-bottom: 15px;
+      }
+      &-text{}
+        }
 }
 
 .reviews{
-  &-title{}
-  &-box{
-    &-figure{
-        &__img{}
-        &__caption{
-            &-text{}
-            &-autor{}
-        }
-    }
+  background-color: $background;
+  &-title{
+    margin-bottom: 11px;
   }
-
+  &-box{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-block{
+    width: 50%;
+    display: flex;
+    margin-top: 24px;
+  }
+  &-img{
+    width: 75px; 
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 23px;
+    background-color: $grayish_blue;
+  }
+  &-content{
+    padding: 16px 20px;
+    width: 476px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: $light_gray;  
+  }
+    &-text{
+      font-size: 14px;
+      font-style: italic;
+      line-height: 18px;
+    }
+    &-autor{
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 18px;
+      color: $ld-gray;
+    }
+      
 }
 
 .buy{
     &-title{}
     &-box{
-        &-plan{
-            &__title{}
-            &__price{}
-            &__list{
-                &-li{}
-            }
-            &__button{}
+      justify-content: center;
+      align-items: flex-end;
+    }
+    &-plan{
+      background-color: $grayish_blue;
+      padding: 20px 0;
+      border: 1px solid $grayish_blue;
+      border-radius: 5px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      &:nth-child(2){
+          margin: 0 50px;
         }
     }
+    &-name{
+          color: $white;
+          font-weight: normal;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    &-price{
+      background-color: $white;
+      text-align: center;
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 1.75;
+      width: 100%;
+    }
+    &-list{
+      padding: 20px;
+      padding-left: 37px;
+      box-sizing: border-box;
+    }
+    &-list-item{
+          color: $white;
+          font-size: 14px;
+          line-height: 1.75;
+      }
+    &-button{
+      
+    }
+    
+    }
 
-
-}
 
 .contacts{
-    &-title{}
-    &-form{
-        &__name{}
-        &__eamil{}
-        &__message{}
-        &__submit{}
+  background-color: $grayish_blue;
+    &-title{
+      margin-bottom: 10px;
     }
-    &-info{
-        &-list{
-            &__skype{}
-            &__number{}
-            &__email{}
-            &__phone{}
-        }
-        &-social{
-            &__li{
-                & .twitter{}
-                & .facebook{}
-                & .linkedin{}
-                & .google{}
-                & .youtube{}
-            }
-        }
+    &-box{
+      width: 800px;
+      margin: 0 auto;
+      padding: 0 200px;
+      justify-content: space-between;
+    }
+    &-form{
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+    }
+    &-name,
+    &-email,
+    &-message{
+      border-radius: 5px;
+      margin-bottom: 21px;
+      padding: 14px 0 14px 10px;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.5;
+    }
+
+    &-message{
+      resize:none
+    }
+    
+    
+    &-submit{
+      padding: 14px 48px;
+      font-size: 16px;
+    }
+    
+    &-info{}
+    &-list{
+      list-style: none;
+    }
+    &-item{
+      display: flex;
+      margin-bottom: 18px;
+    }
+
+    &-link{
+      text-decoration: none;
+      color: $white;
+    }
+    &-skype{
+    &::before{
+      content: url(../img/skype_icon.png);
+      margin-right: 5px;
+    }
+    }
+    &-number::before{
+      content: url(../img/icq_icon.png);
+      margin-right: 5px;
+    }
+    &-mail::before{
+      content: url(../img/email_icon.png);
+      margin-right: 5px;
+    }
+    &-phone::before{
+      content: url(../img/phone_icon.png);
+      margin-right: 5px;
+    }
+  
+    &-social{
+      padding-top: 32px;
+      display: flex;
+    }
+    &-icon{
+      font-family: "Socialico";
+      font-size: 60px;
+      text-decoration: none;
+      color: #ffffff;
+      line-height: 0.4;
+      letter-spacing: 1.5px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
     }
 }
 
 .footer{
-  &-text{}
+  padding: 10px 0;
+  &-text{
+    text-align: center;
+    font-size: 12px;
+    line-height: 2;
+  letter-spacing: 0.3px;
+  color: $grayish_blue;
+  }
 }
