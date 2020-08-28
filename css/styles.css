@@ -3,6 +3,11 @@
   src: url(../fonts/Socialico/Socialico.ttf);
 }
 
+@font-face {
+  font-family: "ArealMT";
+  src: url(../fonts/arealMT/ARIALMT.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +58,7 @@ section {
   display: block;
   text-align: center;
   width: 260px;
+  border: 2px solid white;
   border-radius: 5px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -62,6 +68,13 @@ section {
   color: #445162;
   font-weight: bold;
   font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: white;
 }
 
 .info {
@@ -241,6 +254,19 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f5f5f5;
+  position: relative;
+}
+
+.reviews-content::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-right: 12px solid #f5f5f5;
+  position: absolute;
+  top: 28px;
+  left: -23px;
 }
 
 .reviews-text {
@@ -346,6 +372,7 @@ section {
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
+  border: none;
 }
 
 .contacts-message {
@@ -355,6 +382,9 @@ section {
 .contacts-submit {
   padding: 14px 48px;
   font-size: 16px;
+  border: 2px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contacts-list {
@@ -407,9 +437,10 @@ section {
   color: #ffffff;
   line-height: 0.4;
   letter-spacing: 1.5px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
+}
+
+.contacts-icon:hover {
+  color: #989898;
 }
 
 .footer {
